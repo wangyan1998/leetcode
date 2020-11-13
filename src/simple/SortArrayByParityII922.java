@@ -38,7 +38,7 @@ public class SortArrayByParityII922 {
         for(int x:A){
             if(x%2==0){
                 ans[i]=x;
-                i+=2;
+                i+=2; 
             }
         }
         i=1;
