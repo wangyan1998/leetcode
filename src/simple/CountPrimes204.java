@@ -1,6 +1,8 @@
 package simple;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class CountPrimes204 {
     /*
@@ -46,5 +48,30 @@ public class CountPrimes204 {
             }
         }
         return ans;
+    }
+    /*
+    线性筛：优化的目标是让每个合数只被标记一次，这样时间复杂度即能保证为 O(n)。
+    相较于埃氏筛，我们多维护一个primes数组表示当前得到的质数集合。我们从小到大遍历，
+    如果当前的数 x是质数，就将其加入primes数组。
+    另一点与埃氏筛不同的是，「标记过程」不再仅当 x为质数时才进行，而是对每个整数 x都进行。
+    对于整数x，我们不再标记其所有的倍数 x*x,x*(x+1),…，而是只标记质数集合中的数与 x 相乘的数，
+    即 primes0*x,primes1*x,且在发现 x%primesi=0的时候结束当前标记。
+     */
+    public int countPrimes2(int n) {
+        List<Integer> primes = new ArrayList<Integer>();
+        int[] isPrime = new int[n];
+        Arrays.fill(isPrime, 1);
+        for (int i = 2; i < n; ++i) {
+            if (isPrime[i] == 1) {
+                primes.add(i);
+            }
+            for (int j = 0; j < primes.size() && i * primes.get(j) < n; ++j) {
+                isPrime[i * primes.get(j)] = 0;
+                if (i % primes.get(j) == 0) {
+                    break;
+                }
+            }
+        }
+        return primes.size();
     }
 }
