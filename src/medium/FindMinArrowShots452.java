@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class FindMinArrowShots452 {
-    public static int findMinArrowShots(int[][] points) {//排序+贪心算法
+    public int findMinArrowShots(int[][] points) {//排序+贪心算法
        if(points.length==0){
            return 0;
        }
@@ -36,10 +36,5 @@ public class FindMinArrowShots452 {
            }
        }
        return ans;
-    }
-
-    public static void main(String[] args) {
-        int[][] point ={{3,9},{7,12},{3,8},{6,8},{9,10},{2,9},{0,9},{3,9},{0,6},{2,8}};
-        System.out.println(findMinArrowShots(point));
     }
 }
