@@ -1,6 +1,8 @@
 package classify.sort;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CountingSort {
     public int[] countingSort(int[] array){
@@ -33,5 +35,18 @@ public class CountingSort {
             }
         }
         return array;
+    }
+    public int[] countingSort1(int[] array){
+        int[] arr=new int[array.length];
+        for(int i=0;i<array.length;i++){
+            int num=0;
+            for(int j=0;j<array.length;j++){
+                if(array[j]<array[i]){
+                    num++;
+                }
+            }
+           arr[num]=array[i];
+        }
+        return arr;
     }
 }
