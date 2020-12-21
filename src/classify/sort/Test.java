@@ -52,6 +52,14 @@ public class Test {
         QuickSort q=new QuickSort();
         array6=q.quickSort(array6,0,array6.length-1);
         print(array6,s6);
+        /*
+        计数排序
+         */
+        int[] array7={10,5,4,9,8,3,0};
+        String s7="计数排序：";
+        CountingSort c=new CountingSort();
+        array7=c.countingSort(array7);
+        print(array7,s7);
     }
     public static void print(int[] nums,String s){
         System.out.println(s);
