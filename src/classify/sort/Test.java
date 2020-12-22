@@ -58,9 +58,16 @@ public class Test {
         int[] array7={10,5,4,9,8,3,0};
         String s7="计数排序：";
         CountingSort c=new CountingSort();
-        array7=c.countingSort1(array7);
-
+        array7=c.countingSort(array7);
         print(array7,s7);
+        /*
+        堆排序
+         */
+        int[] array8={10,5,4,9,8,3,0};
+        String s8="堆排序：";
+        HeapSort h=new HeapSort();
+        h.heapSort(array8);
+        print(array8,s8);
     }
     public static void print(int[] nums,String s){
         System.out.println(s);
