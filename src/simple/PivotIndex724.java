@@ -38,7 +38,7 @@ public class PivotIndex724 {
             return -1;
         }
     }
-     
+
     public int pivotIndex1(int[] nums){
         int total= Arrays.stream(nums).sum();
         int sum=0;
