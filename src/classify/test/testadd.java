@@ -10,15 +10,19 @@ import java.util.Set;
  * @date 2021/3/28 10:19
  */
 public class testadd {
+    public int a=4;
+    public int getnum(){
+        return 0;
+    }
     public static void main(String[] args) {
-        Set<List<Integer>> res=new HashSet<List<Integer>>();
-        List<Integer> a=new ArrayList<Integer>();
-        List<Integer> b=new ArrayList<Integer>();
-       // a.add(2);
-        b.add(2);
-        res.add(a);
-        res.add(b);
-        System.out.println(res);
-        System.out.println(res.size());
+       ClassLoader classLoader=ClassLoader.getSystemClassLoader();
+        System.out.println(classLoader);
+        ClassLoader parent=classLoader.getParent();
+        System.out.println(parent);
+        ClassLoader c=parent.getParent();
+        System.out.println(c);
+        System.out.println(testadd.class.getClassLoader());
+        System.out.println(String.class.getClassLoader());
+        System.out.println(testadd.class.getMethods());
     }
 }
