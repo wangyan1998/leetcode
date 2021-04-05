@@ -90,11 +90,13 @@ public class CountString {
         workbook = Workbook.getWorkbook(fileInputStream);
         Sheet readfirst = workbook.getSheet(0);
         int rows = readfirst.getRows();
-        for (int i = 1; i < rows; i++) {
+        //System.out.println(rows);
+        for (int i = 1; i <rows; i++) {
             Cell[] cells = readfirst.getRow(i); //循环得到每一行的单元格对象
             String Name = cells[0].getContents();
             name.add(Name);
         }
+        name.add("何斐");
         return name;
     }
 
