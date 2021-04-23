@@ -19,7 +19,6 @@ public class MaxSumSubmatrix363 {
      * 则区间[l,r)的区间和a[l]+a[l+1]+...a[r-1]可以表示S[r]-S[l]
      * 枚举r，上述问题的约束S[r]-S[l]<=k可以转换成S[l]>=S[r]-k,要使S[r]-S[l]尽可能大，则需要寻找最小的满足上述公式的S[l]
      * 我们可以在枚举r的同时维护一个存储S[i]的有序集合，则可以在O(logn)的时间内二分找到符合要求的S[l]
-     *
      * @param matrix
      * @param k
      * @return
