@@ -65,7 +65,7 @@ public class CountString {
         List<Integer> num = new ArrayList<Integer>();
         for (int i = 0; i < name.size(); i++) {
             try {
-                num.add(count("D:\\Desktop\\graduate_student\\工作临时文件夹\\工作\\助教\\2021年春季学期\\投票统计\\2.txt", name.get(i)));
+                num.add(count("D:\\Desktop\\graduate_student\\工作临时文件夹\\工作\\助教\\2021年春季学期\\投票统计\\3.txt", name.get(i)));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
