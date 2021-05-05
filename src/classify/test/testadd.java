@@ -10,19 +10,12 @@ import java.util.Set;
  * @date 2021/3/28 10:19
  */
 public class testadd {
-    public int a=4;
-    public int getnum(){
-        return 0;
-    }
     public static void main(String[] args) {
-       ClassLoader classLoader=ClassLoader.getSystemClassLoader();
-        System.out.println(classLoader);
-        ClassLoader parent=classLoader.getParent();
-        System.out.println(parent);
-        ClassLoader c=parent.getParent();
-        System.out.println(c);
-        System.out.println(testadd.class.getClassLoader());
-        System.out.println(String.class.getClassLoader());
-        System.out.println(testadd.class.getMethods());
+       int i=10;
+       int j=20;
+       int k=i+j;
+        String s="abc";
+        System.out.println(i);
+        System.out.println(k);
     }
 }
