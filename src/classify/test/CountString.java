@@ -19,6 +19,7 @@ import jxl.write.WriteException;
  * @date 2021/4/4 11:40
  */
 public class CountString {
+    private static String filename="5-27";
     /**
      * 统计文件中字符串的个数
      *
@@ -65,7 +66,7 @@ public class CountString {
         List<Integer> num = new ArrayList<Integer>();
         for (int i = 0; i < name.size(); i++) {
             try {
-                num.add(count("D:\\Desktop\\graduate_student\\工作临时文件夹\\工作\\助教\\2021年春季学期\\投票统计\\6.txt", name.get(i)));
+                num.add(count("D:\\Desktop\\graduate_student\\工作临时文件夹\\工作\\助教\\2021年春季学期\\投票统计\\元数据\\"+filename+".txt", name.get(i)));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -117,7 +118,7 @@ public class CountString {
         int date = c.get(Calendar.DATE);
         String testdate=year+"-"+month+"-"+date;
         //创建Excel文件，B库CD表文件
-        File fileA = new File("D:\\Desktop\\graduate_student\\工作临时文件夹\\工作\\助教\\2021年春季学期\\投票统计\\"+testdate+".xls");
+        File fileA = new File("D:\\Desktop\\graduate_student\\工作临时文件夹\\工作\\助教\\2021年春季学期\\投票统计\\元数据\\"+filename+".xls");
         fileA.createNewFile();
         if (fileA.exists()) {
             //如果文件存在就删除
