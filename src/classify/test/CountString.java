@@ -19,7 +19,7 @@ import jxl.write.WriteException;
  * @date 2021/4/4 11:40
  */
 public class CountString {
-    private static String filename="5-27";
+    private static String filename="6-3";
     /**
      * 统计文件中字符串的个数
      *
