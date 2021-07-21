@@ -14,7 +14,7 @@ import java.util.Arrays;
  */
 public class MinPairSum1877 {
     /**
-     * 排序+贪心 
+     * 排序+贪心
      * @param nums
      * @return
      */
