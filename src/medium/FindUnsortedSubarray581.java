@@ -37,6 +37,13 @@ public class FindUnsortedSubarray581 {
         return right>left?right-left+1:0;
     }
 
+    /**
+     * 一次遍历，可以知道数组会被分成三部分，num1,num2,num3
+     * 只要排序num2就可以使得整个数组有序。所以num2中的最小元素总是大于num1中的最大元素，num3中的最小元素
+     * 总是大于num2中的最大元素
+     * @param nums
+     * @return
+     */
     public int findUnsortedSubarray1(int[] nums) {
         int n = nums.length;
         int maxn = Integer.MIN_VALUE, right = -1;
