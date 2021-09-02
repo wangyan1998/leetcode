@@ -26,4 +26,40 @@ public class GetKthFromEndJZ22 {
        }
        return h;
     }
+
+    public ListNode getKthFromEnd1(ListNode head, int k) {
+        int n = 0;
+        ListNode node = null;
+
+        for (node = head; node != null; node = node.next) {
+            n++;
+        }
+        for (node = head; n > k; n--) {
+            node = node.next;
+        }
+
+        return node;
+    }
+
+    /**
+     * 双指针
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode getKthFromEnd2(ListNode head, int k) {
+        ListNode fast = head;
+        ListNode slow = head;
+
+        while (fast != null && k > 0) {
+            fast = fast.next;
+            k--;
+        }
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        return slow;
+    }
 }
