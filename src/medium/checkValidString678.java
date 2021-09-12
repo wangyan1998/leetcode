@@ -53,7 +53,7 @@ public class checkValidString678 {
      * @return
      */
     public boolean checkValidString1(String s){
-        Deque<Integer> leftStack=new LinkedList<Integer>();
+         Deque<Integer> leftStack=new LinkedList<Integer>();
         Deque<Integer> asteriskStack=new LinkedList<Integer>();
         int n=s.length();
         for(int i=0;i<n;i++){
