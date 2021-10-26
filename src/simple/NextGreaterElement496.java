@@ -30,6 +30,7 @@ public class NextGreaterElement496 {
             }
         }
         if(i==nums.length-1){
+
             return -1;
         }else {
             for(;i<nums.length;i++){
