@@ -14,6 +14,12 @@ import java.util.Set;
  * @date 2021/11/23 9:19
  */
 public class BuddyStrings859 {
+    /**
+     * 首先长度要一致，字符串要么有两个字符不相同可以互换，要么字符相同最大频次字母大于1
+     * @param s
+     * @param goal
+     * @return
+     */
     public boolean buddyStrings(String s, String goal){
         if(s.length()!=goal.length()){
             return false;
